@@ -1,0 +1,125 @@
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-wrap">
+    <div class="container-fluid">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="/product">Sản phẩm</a></li>
+            <li class="breadcrumb-item active">Giỏ hàng</li>
+        </ul>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+
+<!-- Cart Start -->
+<div class="cart-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="cart-page-inner">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Tổng cộng</th>
+                                    <th>Xóa bỏ</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle">
+                                {{#each cartItem}}
+                                <tr>
+                                    <td>
+                                        <div class="img">
+                                            <a href="#"><img src="{{image1}}" alt="Image"></a>
+                                            <p>{{name}}</p>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" value="{{originPrice}}" id="price{{id}}"></td>
+                                    <td>
+                                        <div class="qty">
+                                            <button class="btn-minus" id="dec{{id}}"><i
+                                                    class="fa fa-minus"></i></button>
+                                            <input type="text" value="1" id="input{{id}}">
+                                            <button class="btn-plus" id="inc{{id}}"><i class="fa fa-plus"></i></button>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" value="" id="result{{id}}"></td>
+                                    <td><a href="/cart/remove/{{id}}"><button><i class="fa fa-trash"></i></button></a>
+                                    </td>
+                                </tr>
+                                <script>
+                                    $(document).ready(function () {
+                                        $("#inc{{id}}").click(function () {
+                                            var num = parseInt($('#input{{id}}').val(), 10);
+                                            var price = parseInt($('#price{{id}}').val(), 10);
+                                            var text = $('#sum').text();
+                                            $('#sum').text(parseInt(text, 10) + price);
+                                            $('#result{{id}}').val(num * price);
+                                            num = num + 1;
+                                            $('#input{{id}}').val(num);
+                                            $('#sum2').text($('#sum').text());
+                                        })
+                                        $("#dec{{id}}").click(function () {
+                                            var num = parseInt($('#input{{id}}').val(), 10);
+                                            var price = parseInt($('#price{{id}}').val(), 10)
+                                            if (num != "1") {
+                                                var price = parseInt($('#price{{id}}').val(), 10);
+                                                var text = $('#sum').text();
+                                                $('#sum').text(parseInt(text, 10) - price);
+                                                $('#result{{id}}').val(num * price);
+                                                num = num - 1;
+                                                $('#input{{id}}').val(num);
+                                                $('#sum2').text($('#sum').text());
+                                            }
+                                        })
+                                        var price = $('#price{{id}}').val();
+                                        var num = $('#input{{id}}').val();
+                                        $('#result{{id}}').val(num * price);
+                                        var text = $('#sum').text();
+                                        $('#sum').text(parseInt(text, 10) + parseInt($('#price{{id}}').val(), 10));
+                                        var text = $('#sum').text();
+                                        $('#sum2').text($('#sum').text());
+                                    })
+
+                                </script>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="cart-page-inner">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="coupon">
+                                <input type="text" placeholder="Mã giảm giá">
+                                <button>Xác nhận</button>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="cart-summary">
+                                <div class="cart-content">
+                                    <h1>Thông tin giỏ hàng</h1>
+                                    <p>Tổng cộng($)<span>
+                                            <div id="sum">0</div>
+                                        </span></p>
+                                    <h2>Tổng chi phí<span>
+                                            <div id="sum2">0</div>
+                                        </span></h2>
+                                </div>
+                                <div class="cart-btn">
+                                          <div class="row"><button>Cập nhật</button><a href="/cart/checkout"><button>Thanh toán</button></a></div>                                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cart End -->

@@ -1,0 +1,262 @@
+<!-- Main Slider Start -->
+<div class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <nav class="navbar bg-light">
+                    <ul class="navbar-nav">
+                        {{#each categoryLeftBar}}
+                            <li class="nav-item">
+                                <a class="nav-link" href={{ihref}}><i class="{{iclass}}"></i>{{name}}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-6">
+                <div class="header-slider normal-slider">
+                    <div class="header-slider-item">
+                        <img src="/img/slider-1.jpg" alt="Không thể tải hình ảnh" />
+                        <div class="header-slider-caption">
+                            <p>An toàn, tiện nghi, hợp thời trang</p>
+                            <a class="btn" href="/product"><i class="fa fa-shopping-cart"></i>Mua ngay</a>
+                        </div>
+                    </div>
+                    <div class="header-slider-item">
+                        <img src="/img/slider-2.jpg" alt="Không thể tải hình ảnh" />
+                        <div class="header-slider-caption">
+                            <p>Giá cả phải chăng</p>
+                            <a class="btn" href="/product"><i class="fa fa-shopping-cart"></i>Mua ngay</a>
+                        </div>
+                    </div>
+                    <div class="header-slider-item">
+                        <img src="/img/slider-3.jpg" alt="Không thể tải hình ảnh" />
+                        <div class="header-slider-caption">
+                            <p>Giao hàng tận nhà</p>
+                            <a class="btn" href="/product"><i class="fa fa-shopping-cart"></i>Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="header-img">
+                    <div class="img-item">
+                        <img src="/img/category-1.jpg" />
+                        <a class="img-text" href="/product">
+                            <p>Thời trang</p>
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <img src="/img/category-2.jpg" />
+                        <a class="img-text" href="/product">
+                            <p>Trẻ em & phụ kiện</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Slider End -->
+
+<!-- Brand Start -->
+<div class="brand">
+    <div class="container-fluid">
+        <div class="brand-slider">
+            <div class="brand-item"><img src="/img/brand-1.png" alt=""></div>
+            <div class="brand-item"><img src="/img/brand-2.png" alt=""></div>
+            <div class="brand-item"><img src="/img/brand-3.png" alt=""></div>
+            <div class="brand-item"><img src="/img/brand-4.png" alt=""></div>
+            <div class="brand-item"><img src="/img/brand-5.png" alt=""></div>
+            <div class="brand-item"><img src="/img/brand-6.png" alt=""></div>
+        </div>
+    </div>
+</div>
+<!-- Brand End -->
+
+<!-- Feature Start-->
+<div class="feature">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-3 col-md-6 feature-col">
+                <div class="feature-content">
+                    <i class="fab fa-cc-mastercard"></i>
+                    <h2>Thanh toán an toàn</h2>
+                    <p>Mọi thông tin giao dịch của bạn đều được mã hóa</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 feature-col">
+                <div class="feature-content">
+                    <i class="fa fa-truck"></i>
+                    <h2>Giá cả phải chăng</h2>
+                    <p>Cam kết hoàn trả 200% nếu phát hiện ở đâu bán rẻ hơn</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 feature-col">
+                <div class="feature-content">
+                    <i class="fa fa-sync-alt"></i>
+                    <h2>Đổi trả hàng miễn phí</h2>
+                    <p>Đổi trả hàng trong vòng 7 ngày, hoàn phí 100%</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 feature-col">
+                <div class="feature-content">
+                    <i class="fa fa-comments"></i>
+                    <h2>Hỗ trợ 24/7</h2>
+                    <p>Nhân viên tư vấn trực 24/7 để giải đáp mọi thắc mắc của khách hàng</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature End-->
+
+<!-- Call to Action Start -->
+<div class="call-to-action">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1>Gọi tôi nếu cần hỗ trợ</h1>
+            </div>
+            <div class="col-md-6">
+                <a href="tel:0123456789">+84-123-456-789</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Call to Action End -->
+
+<!-- Featured Product Start -->
+<div class="featured-product product">
+    <div class="container-fluid">
+        <div class="section-header">
+            <h1>Bán chạy nhất</h1>
+        </div>
+        <div class="row align-items-center product-slider product-slider-4">
+            {{#each buyingMost}}
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <div class="product-title">
+                            <a href="/product/detail/{{id}}">{{name}}</a>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="product-image">
+                            <a href="/product/detail/{{id}}">
+                                <img src={{image1}} alt="">
+                            </a>
+                            <div class="product-action">
+                                <a href="/cart/{{id}}"><i class="fa fa-cart-plus"></i></a>
+                                <a href="/wishlist"><i class="fa fa-heart"></i></a>
+                                <a href="/product/detail/{{id}}"><i class="fa fa-info"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <h3>{{formatCurencyVND originPrice}}<span>đ</span></h3>
+                            <a class="btn" href="/product/detail/{{id}}"><i class="fa fa-shopping-cart"></i>Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+<!-- Featured Product End -->
+
+
+
+<!-- Newsletter Start -->
+<div class="newsletter">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Theo dõi thông tin của chúng tôi</h1>
+            </div>
+            <div class="col-md-6">
+                <div class="form">
+                    <input type="email" placeholder="Địa chỉ email">
+                    <button>Gửi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Newsletter End -->
+
+<!-- Recent Product Start -->
+<div class="recent-product product">
+    <div class="container-fluid">
+        <div class="section-header">
+            <h1>Sản phẩm mới về</h1>
+        </div>
+        <div class="row align-items-center product-slider product-slider-4">
+            {{#each recentProduct}}
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <div class="product-title">
+                            <a href="/product/detail/{{id}}">{{name}}</a>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="product-image">
+                            <a href="/product/detail/{{id}}">
+                                <img src={{image1}} alt="">
+                            </a>
+                            <div class="product-action">
+                                <a href="/cart/{{id}}"><i class="fa fa-cart-plus"></i></a>
+                                <a href="/product/detail/{{id}}"><i class="fa fa-cart-plus"></i></a>
+                                <a href="/wishlist"><i class="fa fa-heart"></i></a>
+                                <a href="/product/detail/{{id}}"><i class="fa fa-info"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <h3>{{formatCurencyVND originPrice}}<span>đ</span></h3>
+                            <a class="btn" href="/product/detail/{{id}}"><i class="fa fa-shopping-cart"></i>Mua ngay</a>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+<!-- Recent Product End -->
+
+<!-- Review Start -->
+<div class="review">
+    <div class="container-fluid">
+        <div class="row align-items-center review-slider normal-slider">
+            {{#each review}}
+                <div class="col-md-6">
+                    <div class="review-slider-item">
+                        <div class="review-img">
+                            <img src={{image}} alt="">
+                        </div>
+                        <div class="review-text">
+                            <h2>{{customerName}}</h2>
+                            <h3>{{job}}</h3>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>{{comment}}</p>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+<!-- Review End -->
